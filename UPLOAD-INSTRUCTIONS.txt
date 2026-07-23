@@ -1,10 +1,16 @@
-CAREERDEKHO V2 FINAL
+CAREERDEKHO VERSION 3.1 — GITHUB REBRAND
 
-Your WhatsApp number, LinkedIn profile and YouTube channel links are already inserted.
+This release keeps the existing website structure and functionality, while applying:
+- CareerDekho navy + orange branding
+- Improved card shadows, borders and hover effects
+- Orange buttons and highlights
+- Dark navy footer
+- Preferred hero line:
+  Hosted by Nitin Gill · Online Degree & Career Counsellor
 
-Upload every file AND the complete assets folder to the root of your GitHub repository.
+Upload every file in this folder to the root of your GitHub repository.
 
 Commit message:
-Upload final CareerDekho website
+Apply CareerDekho navy and orange rebrand
 
-Wait 1–3 minutes, then press Command + Shift + R on the live website.
+Wait 1–3 minutes, then refresh with Command + Shift + R.

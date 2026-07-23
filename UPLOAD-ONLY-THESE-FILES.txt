@@ -1,0 +1,14 @@
+CAREERDEKHO UNIVERSITY UPDATE
+
+Upload/replace these files in your GitHub repository:
+1. index.html
+2. universities.html
+3. compare-universities.html (new file)
+4. style.css
+5. script.js
+6. sitemap.xml (optional but recommended)
+
+Commit message:
+Add university directory and comparison tool
+
+After committing, wait 1–3 minutes and press Command + Shift + R.

@@ -3,68 +3,82 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Contact CareerDekho | Nitin Gill</title>
-<meta name="description" content="Contact Nitin Gill for personalised online degree and executive education guidance.">
-<link rel="stylesheet" href="style.css">
+<title>Contact CareerDekho | Profile Builder</title>
+<meta name="description" content="Build your education profile and contact the CareerDekho team on WhatsApp.">
+<link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
-
 <header class="navbar">
   <div class="container nav-inner">
     <a class="brand-wrap" href="index.html">
       <div class="brand">Career<span>Dekho</span></div>
-      <div class="brand-tag">An initiative by Nitin Gill</div>
+      <div class="brand-tag">An Initiative by Nitin Gill</div>
     </a>
     <button class="mobile-toggle" aria-label="Open menu">☰</button>
     <nav class="nav-links">
       <a href="programs.html">Programs</a>
       <a href="universities.html">Universities</a>
+      <a href="compare-universities.html">Compare Universities</a>
+      <a href="videos.html">Videos</a>
       <a href="blogs.html">Blogs</a>
+      <a href="resources.html">Resources</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a class="nav-button" href="https://wa.me/917208354187">Free Counselling</a>
+      <a class="nav-button" href="contact.html#profile-builder">Free Counselling</a>
     </nav>
   </div>
 </header>
 
-
 <main>
-<section class="page-hero"><div class="container"><div class="tag">Contact CareerDekho</div><h1>Get Personalised Guidance</h1><p>Share your profile and preferred program. Nitin will help you compare suitable options.</p></div></section>
-<section><div class="container contact-grid">
-<div><h2 class="content-title">Talk to Nitin Gill</h2><p class="muted">For faster assistance, connect directly on WhatsApp.</p><br><a class="button whatsapp-button" href="https://wa.me/917208354187">Chat on WhatsApp</a><br><br><p><strong>YouTube:</strong> <a href="https://www.youtube.com/@nitin.careerdekho">View channel</a></p><p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nitin-gill-b37824372/?skipRedirect=true">Connect on LinkedIn</a></p></div>
-<div class="card"><form class="form" onsubmit="event.preventDefault(); alert('Form submitted locally. Connect a form service later to receive responses.');"><label>Name</label><input required placeholder="Your name"><label>Phone number</label><input required placeholder="Your phone number"><label>Program interested in</label><select><option>Online MBA</option><option>Online MCA</option><option>Online Graduation</option><option>Executive MBA</option><option>Certification Course</option><option>Other</option></select><label>Message</label><textarea placeholder="Tell us about your qualification, experience and goals"></textarea><button class="button button-primary" type="submit">Submit Enquiry</button></form></div>
+<section class="page-hero"><div class="container"><div class="tag">Contact CareerDekho</div><h1>Get Personalised Program Guidance</h1><p>Share your profile so the CareerDekho team can understand your requirements before connecting with you.</p></div></section>
+<section id="profile-builder"><div class="container contact-grid">
+  <div><div class="section-kicker">Build my profile</div><h2 class="content-title">Send a Better-Qualified Enquiry</h2><p class="muted">Fill in the details and the form will open WhatsApp with your profile already written.</p><div class="why-list compact-list"><div class="why-item"><div class="check">✓</div><div><strong>Faster recommendations</strong><p>Your qualification, experience and budget are clear from the beginning.</p></div></div><div class="why-item"><div class="check">✓</div><div><strong>Better comparisons</strong><p>The team can suggest more relevant universities and programs.</p></div></div></div></div>
+  <div class="card">
+    <form id="profileForm" class="form">
+      <label for="profileName">Name</label><input id="profileName" required placeholder="Your full name">
+      <label for="profileQualification">Highest qualification</label><input id="profileQualification" required placeholder="Example: B.Com, B.Tech, 12th">
+      <label for="profileExperience">Work experience</label><input id="profileExperience" placeholder="Example: 4 years in sales">
+      <label for="profileBudget">Approximate budget</label><input id="profileBudget" placeholder="Example: ₹2 lakh">
+      <label for="profileProgram">Interested program</label>
+      <select id="profileProgram"><option>Online MBA</option><option>Online MCA</option><option>Online Graduation</option><option>Executive Program</option><option>Certificate Program</option><option>1 Year or 18 Month MBA Program</option><option>Other</option></select>
+      <label for="profileUniversity">Preferred university or institution</label><input id="profileUniversity" placeholder="Optional">
+      <label for="profileGoal">Career goal</label><textarea id="profileGoal" placeholder="Promotion, career switch, higher qualification, skill development..."></textarea>
+      <button class="button whatsapp-button" type="submit">Send My Profile on WhatsApp</button>
+    </form>
+  </div>
 </div></section>
 </main>
-
 
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div>
         <div class="footer-brand">CareerDekho</div>
-        <div class="footer-sub">An initiative by Nitin Gill</div>
-        <p>Guidance for online degrees, Executive MBAs and university certification programs in India and abroad.</p>
+        <div class="footer-sub">An Initiative by Nitin Gill</div>
+        <p>Guidance for online degrees, Executive Programs and university certification programs in India and abroad.</p>
       </div>
       <div>
         <h3>Explore</h3>
         <a href="programs.html">Programs</a>
         <a href="universities.html">Universities</a>
+        <a href="compare-universities.html">Compare Universities</a>
+        <a href="videos.html">Videos</a>
         <a href="blogs.html">Blogs</a>
-        <a href="about.html">About Nitin</a>
+        <a href="resources.html">Resources</a>
       </div>
       <div>
         <h3>Connect</h3>
-        <a href="https://wa.me/917208354187">WhatsApp</a>
-        <a href="https://www.youtube.com/@nitin.careerdekho">YouTube</a>
-        <a href="https://www.linkedin.com/in/nitin-gill-b37824372/?skipRedirect=true">LinkedIn</a>
+        <a href="https://wa.me/917208354187" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <a href="https://www.youtube.com/@nitin.careerdekho" target="_blank" rel="noopener noreferrer">YouTube</a>
+        <a href="https://www.linkedin.com/in/nitin-gill-b37824372/?skipRedirect=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="about.html">About Nitin</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
     <div class="copyright">© 2026 CareerDekho. All rights reserved.</div>
   </div>
 </footer>
-<a class="floating-whatsapp" href="https://wa.me/917208354187" aria-label="Chat on WhatsApp">☎</a>
-<script src="script.js"></script>
-
+<a class="floating-whatsapp" href="https://wa.me/917208354187" target="_blank" rel="noopener noreferrer" aria-label="Chat with CareerDekho on WhatsApp">☎</a>
+<script src="script.js?v=6"></script>
 </body>
 </html>
