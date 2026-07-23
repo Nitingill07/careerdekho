@@ -2,166 +2,1032 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CareerDekho | Online Degree Guidance</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <meta name="description" content="Guidance for online bachelor's, master's, Executive MBA and certification programs from recognized universities in India and abroad.">
+  <title>CareerDekho | Online Degree & Executive Education Guidance</title>
+
+  <meta
+    name="description"
+    content="Get expert guidance for online bachelor's, master's, Executive MBA and university certification programs from recognized universities in India and abroad."
+  >
+
+  <meta
+    name="keywords"
+    content="online degree, online MBA, online MCA, executive MBA, one year MBA, certification courses, online university, career counselling"
+  >
 
   <style>
+    :root {
+      --primary: #1746a2;
+      --primary-dark: #10377f;
+      --secondary: #eef4ff;
+      --accent: #18a558;
+      --text: #182230;
+      --muted: #5f6b7a;
+      --background: #f8fafc;
+      --white: #ffffff;
+      --border: #e3e8ef;
+      --shadow: 0 12px 35px rgba(15, 31, 54, 0.08);
+      --radius: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #222;
-      background: #f7f8fa;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--background);
       line-height: 1.6;
     }
 
-    header {
-      background: #111827;
-      color: white;
-      padding: 18px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    a {
+      color: inherit;
     }
 
-    header a {
-      color: white;
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
       text-decoration: none;
-      margin-left: 20px;
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+
+    .brand span {
+      color: var(--text);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      color: #344054;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-button {
+      background: var(--primary);
+      color: var(--white) !important;
+      padding: 10px 17px;
+      border-radius: 10px;
     }
 
     .hero {
-      padding: 90px 8%;
-      background: white;
-      text-align: center;
+      background:
+        radial-gradient(circle at top right, #dceaff, transparent 35%),
+        linear-gradient(135deg, #ffffff 0%, #f1f6ff 100%);
+      padding: 90px 0 80px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .tag {
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 100px;
+      background: #e7efff;
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 18px;
     }
 
     .hero h1 {
-      font-size: 42px;
-      margin-bottom: 15px;
+      margin: 0 0 20px;
+      max-width: 760px;
+      font-size: clamp(38px, 5vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
     }
 
     .hero p {
-      max-width: 750px;
-      margin: auto;
+      max-width: 700px;
+      margin: 0 0 28px;
       font-size: 19px;
-      color: #555;
+      color: var(--muted);
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 28px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 25px;
-      padding: 13px 24px;
-      background: #16a34a;
-      color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+      padding: 14px 22px;
+      border-radius: 11px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .button-secondary {
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .trust-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #475467;
+    }
+
+    .hero-card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-card h2 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
+
+    .hero-card p {
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+
+    .quick-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 15px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .quick-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: var(--secondary);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      font-size: 19px;
+    }
+
+    .quick-item strong {
+      display: block;
+      margin-bottom: 2px;
     }
 
     section {
-      padding: 60px 8%;
+      padding: 80px 0;
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 4vw, 42px);
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
     }
 
     .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      background: var(--white);
+      padding: 27px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      background: var(--secondary);
+      font-size: 22px;
+    }
+
+    .card h3 {
+      margin: 0 0 9px;
+      font-size: 21px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .light-section {
+      background: var(--white);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .why-content h2 {
+      font-size: clamp(31px, 4vw, 44px);
+      line-height: 1.2;
+      margin: 0 0 16px;
+    }
+
+    .why-content p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .why-list {
+      display: grid;
+      gap: 16px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 14px;
+      padding: 19px;
+      background: var(--background);
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .check {
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .why-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .why-item p {
+      margin: 0;
+      font-size: 15px;
+    }
+
+    .blog-card {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .blog-image {
+      min-height: 170px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #1d4ed8, #7c3aed);
+      color: white;
+      font-size: 42px;
+    }
+
+    .blog-content {
+      padding: 24px;
+    }
+
+    .blog-category {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .blog-content h3 {
+      margin: 9px 0;
+    }
+
+    .read-link {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .profile-card {
+      min-height: 380px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: linear-gradient(145deg, #eaf2ff, #ffffff);
+    }
+
+    .profile-placeholder {
+      width: 170px;
+      height: 170px;
+      margin: auto auto 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--primary);
+      color: white;
+      font-size: 58px;
+      font-weight: 800;
+    }
+
+    .about-content h2 {
+      font-size: clamp(31px, 4vw, 44px);
+      line-height: 1.2;
+      margin: 0 0 15px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 26px;
+    }
+
+    .stat {
+      padding: 17px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 13px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      color: var(--primary);
+      font-size: 24px;
+    }
+
+    .cta {
+      padding: 70px 0;
+    }
+
+    .cta-box {
+      padding: 55px;
+      border-radius: 26px;
+      background: linear-gradient(135deg, #12357a, #1d5bd6);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .cta-box h2 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 4vw, 44px);
+    }
+
+    .cta-box p {
+      max-width: 720px;
+      margin: 0 auto 26px;
+      color: #dce8ff;
+      font-size: 17px;
+    }
+
+    .whatsapp-button {
+      background: #20b15a;
+      color: var(--white);
     }
 
     footer {
-      text-align: center;
-      padding: 25px;
-      background: #111827;
+      background: #101828;
+      color: #d0d5dd;
+      padding: 50px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      gap: 35px;
+      margin-bottom: 35px;
+    }
+
+    .footer-brand {
       color: white;
+      font-size: 23px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-top: 0;
+      font-size: 16px;
+    }
+
+    footer a {
+      display: block;
+      margin: 8px 0;
+      color: #d0d5dd;
+      text-decoration: none;
+    }
+
+    .copyright {
+      padding-top: 23px;
+      border-top: 1px solid #344054;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 999;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #20b15a;
+      color: white;
+      text-decoration: none;
+      font-size: 27px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .why-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .hero {
+        padding: 65px 0;
+      }
+
+      section {
+        padding: 60px 0;
+      }
+
+      .cards,
+      .stats,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        letter-spacing: -1px;
+      }
+
+      .cta-box {
+        padding: 38px 22px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <strong>CareerDekho</strong>
+  <header class="navbar">
+    <div class="container nav-inner">
 
-    <nav>
-      <a href="#programs">Programs</a>
-      <a href="#blog">Blog</a>
-      <a href="#about">About</a>
-    </nav>
+      <a class="brand" href="#">
+        Career<span>Dekho</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#programs">Programs</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#blogs">Blogs</a>
+        <a href="#about">About</a>
+        <a class="nav-button" href="https://wa.me/917208354187">
+          Free Counselling
+        </a>
+      </nav>
+
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>Choose the Right Online Degree with Confidence</h1>
+  <main>
 
-    <p>
-      Guidance for online graduation, post-graduation, Executive MBA,
-      one-year and eighteen-month MBA programs, and university certification
-      courses from recognized institutions in India and abroad.
-    </p>
+    <section class="hero">
+      <div class="container hero-grid">
 
-    <a class="button" href="https://wa.me/917208354187">
-      Talk on WhatsApp
-    </a>
-  </section>
+        <div>
+          <div class="tag">
+            Online Degree & Executive Education Guidance
+          </div>
 
-  <section id="programs">
-    <h2>Programs We Cover</h2>
+          <h1>
+            Choose the Right Online Degree
+            <span>with Confidence</span>
+          </h1>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Online Graduation</h3>
-        <p>Online bachelor's programs from recognized universities.</p>
+          <p>
+            Get personalised guidance for recognized online bachelor's,
+            master's, Executive MBA, one-year MBA, eighteen-month MBA and
+            university certification programs in India and abroad.
+          </p>
+
+          <div class="hero-buttons">
+            <a
+              class="button button-primary"
+              href="https://wa.me/917208354187"
+            >
+              Get Free Guidance
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="#programs"
+            >
+              Explore Programs
+            </a>
+          </div>
+
+          <div class="trust-points">
+            <span>✓ Recognized universities</span>
+            <span>✓ Personalised comparison</span>
+            <span>✓ Admission support</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h2>Find a Program That Fits You</h2>
+
+          <p>
+            Explore options based on your qualification, work experience,
+            career goals, budget and preferred learning format.
+          </p>
+
+          <div class="quick-item">
+            <div class="quick-icon">🎓</div>
+            <div>
+              <strong>Online UG & PG Degrees</strong>
+              Bachelor's and master's programs for students and professionals.
+            </div>
+          </div>
+
+          <div class="quick-item">
+            <div class="quick-icon">💼</div>
+            <div>
+              <strong>Executive MBA Programs</strong>
+              Programs designed for experienced working professionals.
+            </div>
+          </div>
+
+          <div class="quick-item">
+            <div class="quick-icon">📜</div>
+            <div>
+              <strong>University Certifications</strong>
+              Career-focused certification and executive education programs.
+            </div>
+          </div>
+        </div>
+
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Online Post-Graduation</h3>
-        <p>Master's programs for students and working professionals.</p>
+    <section id="programs">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Programs We Help You Explore</h2>
+
+          <p>
+            Compare programs, eligibility, fees, duration and university
+            recognition before making your final decision.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="card-icon">🎓</div>
+            <h3>Online Graduation</h3>
+            <p>
+              Online BBA, BCA, BA, B.Com and other bachelor's degree programs
+              from recognized universities.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">📚</div>
+            <h3>Online Post-Graduation</h3>
+            <p>
+              Online MBA, MCA, MA, M.Com and other postgraduate programs for
+              graduates and working professionals.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💼</div>
+            <h3>Executive MBA</h3>
+            <p>
+              Executive management programs created for professionals who want
+              leadership and career growth.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">⏱️</div>
+            <h3>One-Year MBA</h3>
+            <p>
+              Accelerated management programs for candidates seeking a shorter
+              and focused learning format.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🌍</div>
+            <h3>International Programs</h3>
+            <p>
+              Explore selected online and executive education programs from
+              universities outside India.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">📜</div>
+            <h3>Certification Courses</h3>
+            <p>
+              University-led professional certifications in management,
+              technology, analytics and other career-focused fields.
+            </p>
+          </article>
+
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Executive MBA</h3>
-        <p>Executive, one-year and eighteen-month MBA options.</p>
+    <section class="light-section" id="why-us">
+      <div class="container why-grid">
+
+        <div class="why-content">
+          <div class="tag">Why CareerDekho?</div>
+
+          <h2>
+            Make an Informed Decision Before You Enrol
+          </h2>
+
+          <p>
+            Choosing a university should not depend only on advertisements or
+            sales calls. We help you compare options based on your actual
+            requirements.
+          </p>
+
+          <a
+            class="button button-primary"
+            href="https://wa.me/917208354187"
+          >
+            Discuss Your Options
+          </a>
+        </div>
+
+        <div class="why-list">
+
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Personalised Recommendations</strong>
+              <p>
+                Suggestions based on your education, experience, budget and
+                career goals.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>University Comparisons</strong>
+              <p>
+                Understand differences in recognition, curriculum, fees,
+                examinations and student support.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>End-to-End Admission Support</strong>
+              <p>
+                Assistance with program selection, documentation and the
+                admission process.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div>
+              <strong>Clear and Practical Guidance</strong>
+              <p>
+                Honest answers to help you understand whether a program is
+                suitable for your career plans.
+              </p>
+            </div>
+          </div>
+
+        </div>
       </div>
+    </section>
 
-      <div class="card">
-        <h3>Certification Courses</h3>
-        <p>Professional certifications from Indian and international universities.</p>
+    <section id="blogs">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Latest Career & Education Guides</h2>
+
+          <p>
+            Practical articles to help you compare universities, understand
+            online degrees and make better career decisions.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <article class="card blog-card">
+            <div class="blog-image">MBA</div>
+
+            <div class="blog-content">
+              <span class="blog-category">Online MBA</span>
+
+              <h3>
+                How to Choose the Right Online MBA University
+              </h3>
+
+              <p>
+                Important factors to compare before selecting an online MBA
+                program.
+              </p>
+
+              <a class="read-link" href="#">
+                Read article →
+              </a>
+            </div>
+          </article>
+
+          <article class="card blog-card">
+            <div class="blog-image">UGC</div>
+
+            <div class="blog-content">
+              <span class="blog-category">Recognition</span>
+
+              <h3>
+                Is an Online Degree Valid in India?
+              </h3>
+
+              <p>
+                Understand university recognition, approvals and degree
+                acceptance.
+              </p>
+
+              <a class="read-link" href="#">
+                Read article →
+              </a>
+            </div>
+          </article>
+
+          <article class="card blog-card">
+            <div class="blog-image">EMBA</div>
+
+            <div class="blog-content">
+              <span class="blog-category">Executive Education</span>
+
+              <h3>
+                Executive MBA vs Online MBA: What Is the Difference?
+              </h3>
+
+              <p>
+                Compare eligibility, audience, learning format and career
+                outcomes.
+              </p>
+
+              <a class="read-link" href="#">
+                Read article →
+              </a>
+            </div>
+          </article>
+
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="blog">
-    <h2>Latest Articles</h2>
+    <section class="light-section" id="about">
+      <div class="container about-grid">
 
-    <div class="cards">
-      <div class="card">
-        <h3>Your First Blog Title</h3>
-        <p>Your blog summary will appear here.</p>
+        <div class="card profile-card">
+          <div>
+            <div class="profile-placeholder">NG</div>
+            <h3>Nitin Gill</h3>
+            <p>Online Degree & Career Counsellor</p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="tag">About the Counsellor</div>
+
+          <h2>
+            Guidance Backed by Real Counselling Experience
+          </h2>
+
+          <p>
+            I am Nitin Gill, an education counsellor specialising in online
+            degree programs, Executive MBAs and university certification
+            courses.
+          </p>
+
+          <p>
+            Since 2022, I have helped students and working professionals
+            understand their program options and select universities according
+            to their educational background, career objectives and budget.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>4+</strong>
+              Years of experience
+            </div>
+
+            <div class="stat">
+              <strong>1000+</strong>
+              Learners guided
+            </div>
+
+            <div class="stat">
+              <strong>UG–PG</strong>
+              Programs covered
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about">
-    <h2>About CareerDekho</h2>
+    <section class="cta">
+      <div class="container">
 
-    <p>
-      CareerDekho helps students and working professionals compare online
-      education options and make informed decisions before enrolling.
-    </p>
-  </section>
+        <div class="cta-box">
+          <h2>
+            Confused Between Universities or Programs?
+          </h2>
+
+          <p>
+            Share your qualification, work experience and career goal. Get
+            guidance before you make an admission decision.
+          </p>
+
+          <a
+            class="button whatsapp-button"
+            href="https://wa.me/917208354187"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    © 2026 CareerDekho
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-brand">CareerDekho</div>
+
+          <p>
+            Guidance for recognized online degrees, Executive MBA and
+            university certification programs in India and abroad.
+          </p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <a href="#programs">Programs</a>
+          <a href="#blogs">Blogs</a>
+          <a href="#about">About Nitin</a>
+        </div>
+
+        <div>
+          <h3>Connect</h3>
+          <a href="https://wa.me/917208354187">WhatsApp</a>
+          <a href="https://www.youtube.com/@nitin.careerdekho">YouTube</a>
+          <a href="https://www.linkedin.com/in/nitin-gill-b37824372/">LinkedIn</a>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 CareerDekho. All rights reserved.
+      </div>
+
+    </div>
   </footer>
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/917208354187"
+    aria-label="Chat with CareerDekho on WhatsApp"
+  >
+    ☎
+  </a>
 
 </body>
 </html>
