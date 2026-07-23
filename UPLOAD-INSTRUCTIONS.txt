@@ -1,16 +1,18 @@
-CAREERDEKHO VERSION 3.1 — GITHUB REBRAND
+CAREERDEKHO VERSION 3.2 — BLUE THEME RESTORED
 
-This release keeps the existing website structure and functionality, while applying:
-- CareerDekho navy + orange branding
-- Improved card shadows, borders and hover effects
-- Orange buttons and highlights
-- Dark navy footer
-- Preferred hero line:
-  Hosted by Nitin Gill · Online Degree & Career Counsellor
+This release:
+- restores the original blue website colours
+- keeps green WhatsApp buttons
+- keeps: Hosted by Nitin Gill · Online Degree & Career Counsellor
+- expands the Universities page with:
+  * publicly listed top online universities
+  * all IIM institutions visibly listed in RiseUpp's IIM section
+  * all certificate categories visibly listed in RiseUpp's certificate section
+- uses original CareerDekho monogram tiles rather than copied university logos
 
-Upload every file in this folder to the root of your GitHub repository.
+Upload all files to the root of your GitHub repository.
 
 Commit message:
-Apply CareerDekho navy and orange rebrand
+Launch CareerDekho Version 3.2 with blue theme
 
 Wait 1–3 minutes, then refresh with Command + Shift + R.

@@ -621,110 +621,92 @@ footer a{display:block;margin:8px 0;color:#d0d5dd;text-decoration:none}
 }
 
 
-/* CareerDekho GitHub Rebrand — Navy + Orange */
+/* CareerDekho Version 3.2 — Original Blue Theme */
 
 :root{
-  --primary:#f47c20;
-  --primary-dark:#d9650f;
-  --primary-soft:#fff1e8;
-  --secondary:#f7f8fc;
-  --accent:#f47c20;
-  --navy:#0b0d22;
-  --navy-2:#15182f;
+  --primary:#1746a2;
+  --primary-dark:#10377f;
+  --secondary:#eef4ff;
+  --accent:#18a558;
   --text:#182230;
   --muted:#667085;
   --white:#ffffff;
-  --border:#e6e8ef;
-  --shadow:0 14px 38px rgba(11,13,34,.10);
-  --radius:18px;
+  --border:#dce4f0;
+  --shadow:0 14px 34px rgba(23,70,162,.10);
+  --radius:16px;
 }
 
 body{
   color:var(--text);
-  background:#ffffff;
-  font-family:Inter,Arial,sans-serif;
-}
-
-h1,h2,h3,.brand,.footer-brand{
-  font-family:Poppins,Inter,Arial,sans-serif;
+  background:#fff;
+  font-family:Arial,Helvetica,sans-serif;
 }
 
 .navbar{
-  background:rgba(255,255,255,.96);
+  background:#fff;
   border-bottom:1px solid var(--border);
-  backdrop-filter:blur(10px);
 }
 
 .brand{
-  color:var(--navy);
+  color:var(--primary);
 }
 
-.brand span,
+.brand span{
+  color:var(--text);
+}
+
 .nav-links a:hover,
 .nav-links a.active,
-.footer a:hover{
-  color:var(--accent);
-}
-
-.brand-tag{
-  color:#667085;
+.read-link,
+.section-kicker,
+.video-category,
+.tag,
+.floating-stat strong,
+.stat strong{
+  color:var(--primary);
 }
 
 .nav-button,
-.button-primary,
-.whatsapp-button{
-  background:var(--accent);
+.button-primary{
+  background:var(--primary);
   color:#fff !important;
-  border-color:var(--accent);
+  border-color:var(--primary);
 }
 
 .nav-button:hover,
-.button-primary:hover,
-.whatsapp-button:hover{
+.button-primary:hover{
   background:var(--primary-dark);
   border-color:var(--primary-dark);
-  transform:translateY(-1px);
 }
 
 .button-secondary{
   background:#fff;
-  color:var(--navy);
-  border:1px solid #cfd4df;
+  color:var(--text);
+  border:1px solid var(--border);
 }
 
 .button-secondary:hover{
-  border-color:var(--accent);
-  color:var(--accent);
-  background:var(--primary-soft);
+  color:var(--primary);
+  border-color:var(--primary);
+  background:var(--secondary);
+}
+
+.whatsapp-button,
+.floating-whatsapp{
+  background:#20b15a;
+  color:#fff !important;
 }
 
 .hero{
-  background:
-    radial-gradient(circle at 82% 18%, rgba(244,124,32,.14), transparent 30%),
-    linear-gradient(135deg,#ffffff 0%,#fafbff 55%,#f4f5fb 100%);
+  background:linear-gradient(135deg,#ffffff 0%,#f8fbff 55%,#edf4ff 100%);
 }
 
 .hero h1{
-  color:var(--navy);
+  color:var(--text);
 }
 
 .hero h1 span{
-  color:var(--accent);
-}
-
-.hero-photo-wrap{
-  background:linear-gradient(145deg,#f3f4f8,#ffffff);
-  border-color:#e4e6ec;
-  box-shadow:0 22px 50px rgba(11,13,34,.12);
-}
-
-.floating-stat strong,
-.stat strong,
-.section-kicker,
-.video-category,
-.read-link,
-.tag{
-  color:var(--accent);
+  color:var(--primary);
 }
 
 .card,
@@ -736,9 +718,9 @@ h1,h2,h3,.brand,.footer-brand{
 .selector-card,
 .directory-tools,
 .moving-university{
-  border-color:var(--border);
+  background:#fff;
+  border:1px solid var(--border);
   box-shadow:var(--shadow);
-  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
 }
 
 .card:hover,
@@ -748,9 +730,8 @@ h1,h2,h3,.brand,.footer-brand{
 .institution-card:hover,
 .certificate-card:hover,
 .moving-university:hover{
-  transform:translateY(-4px);
-  border-color:#f2b98f;
-  box-shadow:0 18px 44px rgba(11,13,34,.14);
+  transform:translateY(-3px);
+  border-color:#b9c9e7;
 }
 
 .card-icon,
@@ -760,81 +741,72 @@ h1,h2,h3,.brand,.footer-brand{
 .resource-card > span,
 .certificate-card span,
 .check{
-  background:var(--primary-soft);
-  color:var(--accent);
+  background:var(--secondary);
+  color:var(--primary);
 }
 
 .light-section{
-  background:#f7f8fc;
+  background:#f7f9fc;
 }
 
-.highlight-band,
-.cta-box{
-  background:
-    radial-gradient(circle at 85% 20%, rgba(244,124,32,.22), transparent 28%),
-    linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);
+.cta-box,
+.highlight-band{
+  background:linear-gradient(135deg,#1746a2,#10377f);
   color:#fff;
 }
 
-.highlight-band .section-heading p,
-.cta-box p{
-  color:#d7dbea;
+.cta-box p,
+.highlight-band .section-heading p{
+  color:#dbe7ff;
 }
 
 footer{
-  background:
-    radial-gradient(circle at 10% 10%, rgba(244,124,32,.10), transparent 28%),
-    var(--navy);
+  background:#0f1d38;
   color:#fff;
 }
 
-.footer-sub,
 footer p,
-footer a{
-  color:#c9cedc;
+footer a,
+.footer-sub{
+  color:#cbd5e1;
 }
 
 .footer-brand{
   color:#fff;
 }
 
-.footer-brand::after{
-  content:"";
-  display:inline-block;
-  width:8px;
-  height:8px;
-  margin-left:6px;
-  border-radius:50%;
-  background:var(--accent);
-  vertical-align:middle;
-}
-
-.floating-whatsapp{
-  background:var(--accent);
-}
-
 .filter-button.active,
 .comparison-vs{
-  background:var(--accent);
-  border-color:var(--accent);
+  background:var(--primary);
+  border-color:var(--primary);
 }
 
 .directory-search:focus{
-  border-color:var(--accent);
-  box-shadow:0 0 0 3px rgba(244,124,32,.13);
+  border-color:var(--primary);
+  box-shadow:0 0 0 3px rgba(23,70,162,.12);
 }
 
 .other-program-box{
-  background:linear-gradient(135deg,#fff7f1,#ffffff);
+  background:linear-gradient(135deg,#f0f5ff,#fff);
 }
 
 .comparison-table th{
-  background:#fff3ea;
+  background:var(--secondary);
 }
 
-@media(max-width:900px){
-  .nav-links{
-    background:#fff;
-    border-top:1px solid var(--border);
-  }
+/* Safe, self-created identity tiles used instead of copied university logos */
+.brand-tile{
+  width:62px;
+  height:62px;
+  border-radius:15px;
+  display:grid;
+  place-items:center;
+  flex-shrink:0;
+  background:linear-gradient(145deg,#eef4ff,#fff);
+  border:1px solid #cbd8ef;
+  color:var(--primary);
+  font-size:12px;
+  font-weight:800;
+  text-align:center;
+  letter-spacing:.2px;
 }
