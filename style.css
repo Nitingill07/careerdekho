@@ -134,3 +134,74 @@ footer a{display:block;margin:8px 0;color:#d0d5dd;text-decoration:none}
 .faq-item h3{margin:0 0 6px;font-size:18px}
 @media(max-width:900px){.logo-strip{grid-template-columns:repeat(3,1fr)}.highlight-grid{grid-template-columns:repeat(2,1fr)}.hero-photo-wrap{min-height:440px}.hero-photo{height:420px}}
 @media(max-width:620px){.logo-strip,.highlight-grid{grid-template-columns:1fr 1fr}.hero-photo-wrap{min-height:390px;padding:18px 18px 0}.hero-photo{height:370px}.floating-stat{min-width:125px;padding:10px 12px}.stat-one{left:10px;top:16px}.stat-two{right:10px;bottom:18px}}
+/* CareerDekho YouTube section */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.video-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-content {
+  padding: 24px;
+}
+
+.video-category {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.video-content h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.video-content p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.video-channel-link {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.lead-trust-points {
+  justify-content: center;
+  margin: 22px 0 26px;
+  color: #ffffff;
+}
+
+@media (max-width: 900px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
