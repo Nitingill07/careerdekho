@@ -1,0 +1,10 @@
+CAREERDEKHO V2 FINAL
+
+Your WhatsApp number, LinkedIn profile and YouTube channel links are already inserted.
+
+Upload every file AND the complete assets folder to the root of your GitHub repository.
+
+Commit message:
+Upload final CareerDekho website
+
+Wait 1–3 minutes, then press Command + Shift + R on the live website.

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://nitingill07.github.io/careerdekho/sitemap.xml
