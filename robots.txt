@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://nitingill07.github.io/careerdekho/sitemap.xml
+
+Sitemap: https://mycareerdekho.in/sitemap.xml
