@@ -1493,3 +1493,279 @@ footer a,
   }
 
 }
+/* =========================================================
+   CareerDekho Hero V4.1 — Final Visual Alignment
+   ========================================================= */
+
+
+/* =========================
+   LOGO — SHOW ONLY CIRCLE
+   ========================= */
+
+.brand-wrap{
+  width:70px;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-radius:50%;
+  background:transparent;
+}
+
+.brand-logo{
+  width:70px;
+  height:70px;
+  display:block;
+  object-fit:cover;
+
+  /* removes the square corners of the uploaded PNG */
+  border-radius:50%;
+  clip-path:circle(50% at 50% 50%);
+}
+
+
+/* =========================
+   NAVBAR CLEAN ALIGNMENT
+   ========================= */
+
+.nav-inner{
+  min-height:86px;
+}
+
+.nav-links{
+  flex:1;
+  justify-content:flex-end;
+  gap:22px;
+}
+
+.nav-links a{
+  font-size:14px;
+}
+
+
+/* =========================
+   HERO MAIN LAYOUT
+   ========================= */
+
+.hero{
+  padding:66px 0 0;
+}
+
+.hero-grid{
+  grid-template-columns:
+    minmax(0,.92fr)
+    minmax(0,1.08fr);
+
+  gap:18px;
+  align-items:center;
+}
+
+
+/* =========================
+   LEFT HERO CONTENT
+   ========================= */
+
+.hero-content{
+  padding:22px 0 54px;
+}
+
+.hero h1{
+  max-width:620px;
+  font-size:clamp(46px,4.55vw,64px);
+  line-height:1.08;
+}
+
+.hero p{
+  max-width:625px;
+}
+
+
+/* =========================
+   RIGHT HERO VISUAL
+   ========================= */
+
+.hero-visual{
+  position:relative;
+
+  width:100%;
+  height:100%;
+
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+
+  overflow:visible;
+}
+
+.hero-illustration{
+  display:block;
+
+  width:132%;
+  max-width:none;
+  height:auto;
+
+  object-fit:contain;
+  object-position:right bottom;
+
+  /*
+    Pull the illustration toward the centre
+    and make the bottom sit naturally with the hero
+  */
+  margin-right:-14%;
+  margin-left:-10%;
+  margin-bottom:0;
+}
+
+
+/* =========================
+   PROOF / AUTHORITY STRIP
+   ========================= */
+
+.hero-proof{
+  width:min(1120px,90%);
+
+  min-height:112px;
+
+  margin:0 auto 0;
+
+  padding:24px 44px;
+
+  grid-template-columns:
+    1fr
+    1px
+    1fr
+    1px
+    1fr;
+
+  gap:38px;
+
+  background:#ffffff;
+
+  border:1px solid var(--border);
+  border-radius:16px;
+
+  box-shadow:
+    0 10px 30px rgba(23,70,162,.07);
+}
+
+.hero-proof-item strong{
+  font-size:27px;
+}
+
+.hero-proof-item span{
+  margin-top:4px;
+  font-size:13px;
+}
+
+.hero-proof-divider{
+  height:48px;
+}
+
+
+/* =========================
+   DESKTOP — KEEP NAV ONE LINE
+   ========================= */
+
+@media(min-width:1101px){
+
+  .container{
+    width:min(1180px,90%);
+  }
+
+}
+
+
+/* =========================
+   SMALL DESKTOP
+   ========================= */
+
+@media(max-width:1100px) and (min-width:901px){
+
+  .brand-wrap,
+  .brand-logo{
+    width:60px;
+    height:60px;
+  }
+
+  .nav-links{
+    gap:13px;
+  }
+
+  .hero-grid{
+    grid-template-columns:.95fr 1.05fr;
+  }
+
+  .hero-illustration{
+    width:128%;
+    margin-right:-12%;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media(max-width:900px){
+
+  .brand-wrap,
+  .brand-logo{
+    width:58px;
+    height:58px;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-visual{
+    justify-content:center;
+  }
+
+  .hero-illustration{
+    width:100%;
+    max-width:700px;
+
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .hero-proof{
+    width:100%;
+    border-left:0;
+    border-right:0;
+    border-radius:0;
+    box-shadow:none;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media(max-width:620px){
+
+  .brand-wrap,
+  .brand-logo{
+    width:50px;
+    height:50px;
+  }
+
+  .hero-illustration{
+    width:112%;
+    max-width:none;
+
+    margin-left:-6%;
+    margin-right:-6%;
+  }
+
+  .hero-proof{
+    padding:18px 3%;
+    gap:11px;
+  }
+
+}
