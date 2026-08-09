@@ -150,3 +150,19 @@ if (directorySearch) {
     updateDirectory();
   }
 }
+/* Use CareerDekho logo consistently across all pages */
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".brand-wrap").forEach(function (brand) {
+
+    if (!brand.querySelector(".brand-logo")) {
+      brand.innerHTML = `
+        <img
+          src="careerdekho-logo.png"
+          alt="CareerDekho"
+          class="brand-logo"
+        >
+      `;
+    }
+
+  });
+});
