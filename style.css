@@ -1796,3 +1796,24 @@ footer a,
 .institution-card:hover {
   text-decoration: none;
 }
+/* Clickable course cards */
+
+.course-link-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-link-card:visited {
+  color: inherit;
+}
+
+.course-link-card:hover {
+  text-decoration: none;
+  transform: translateY(-4px);
+}
+
+.course-link-card .read-link {
+  margin-top: 16px;
+}
