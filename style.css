@@ -1783,3 +1783,16 @@ footer a,
   justify-content:center;
   flex-shrink:0;
 }
+.institution-card {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.institution-card:visited {
+  color: inherit;
+}
+
+.institution-card:hover {
+  text-decoration: none;
+}
