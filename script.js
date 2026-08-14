@@ -166,3 +166,134 @@ document.addEventListener("DOMContentLoaded", function () {
 
   });
 });
+/* =========================================
+   UNIVERSITY DIRECTORY SEARCH + FILTERS
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  const searchInput = document.getElementById("directorySearch");
+  const filterButtons = document.querySelectorAll(".filter-button");
+  const directoryItems = document.querySelectorAll(".directory-item");
+  const directoryCategories = document.querySelectorAll(".directory-category");
+  const noResults = document.getElementById("noDirectoryResults");
+
+  let activeFilter = "all";
+
+
+  function filterDirectory() {
+
+    const searchTerm = searchInput
+      ? searchInput.value.toLowerCase().trim()
+      : "";
+
+    let visibleCount = 0;
+
+
+    directoryItems.forEach(function (item) {
+
+      const category = item.dataset.category || "";
+
+      const searchableText = (
+        (item.dataset.search || "") +
+        " " +
+        item.textContent
+      ).toLowerCase();
+
+
+      const matchesSearch =
+        searchTerm === "" ||
+        searchableText.includes(searchTerm);
+
+
+      const matchesFilter =
+        activeFilter === "all" ||
+        category === activeFilter;
+
+
+      if (matchesSearch && matchesFilter) {
+
+        item.style.display = "";
+
+        visibleCount++;
+
+      } else {
+
+        item.style.display = "none";
+
+      }
+
+    });
+
+
+    /* Hide empty category sections */
+
+    directoryCategories.forEach(function (section) {
+
+      const visibleItems =
+        Array.from(section.querySelectorAll(".directory-item"))
+          .some(function (item) {
+            return item.style.display !== "none";
+          });
+
+
+      if (visibleItems) {
+
+        section.style.display = "";
+
+      } else {
+
+        section.style.display = "none";
+
+      }
+
+    });
+
+
+    /* Show no-results message */
+
+    if (noResults) {
+
+      noResults.hidden = visibleCount !== 0;
+
+    }
+
+  }
+
+
+
+  /* LIVE SEARCH */
+
+  if (searchInput) {
+
+    searchInput.addEventListener("input", filterDirectory);
+
+  }
+
+
+
+  /* FILTER BUTTONS */
+
+  filterButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+      activeFilter = button.dataset.filter;
+
+
+      filterButtons.forEach(function (btn) {
+        btn.classList.remove("active");
+      });
+
+
+      button.classList.add("active");
+
+
+      filterDirectory();
+
+    });
+
+  });
+
+
+});
