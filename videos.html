@@ -17,7 +17,59 @@
   content="Watch CareerDekho videos on online degrees, university comparisons, Online MBA options and Executive Programs."
 >
 
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="stylesheet" href="style.css?v=8">
+
+
+<!-- =========================================
+     VIDEOS PAGE CTA FIX
+========================================= -->
+
+<style>
+
+.video-cta-box {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 55px 45px 45px !important;
+  text-align: center;
+}
+
+.video-cta-box .hero-buttons {
+  position: static !important;
+  transform: none !important;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+  margin-top: 28px !important;
+  margin-bottom: 0 !important;
+}
+
+.video-cta-box .hero-buttons .button {
+  margin: 0;
+}
+
+@media (max-width: 650px) {
+
+  .video-cta-box {
+    padding: 38px 22px 32px !important;
+  }
+
+  .video-cta-box .hero-buttons {
+    flex-direction: column;
+  }
+
+  .video-cta-box .hero-buttons .button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+}
+
+</style>
 
 </head>
 
@@ -56,23 +108,37 @@
 
     <nav class="nav-links">
 
-      <a href="programs.html">Programs</a>
+      <a href="programs.html">
+        Programs
+      </a>
 
-      <a href="universities.html">Universities</a>
+      <a href="universities.html">
+        Universities
+      </a>
 
       <a href="compare-universities.html">
         Compare Universities
       </a>
 
-      <a href="videos.html">Videos</a>
+      <a href="videos.html">
+        Videos
+      </a>
 
-      <a href="blogs.html">Blogs</a>
+      <a href="blogs.html">
+        Blogs
+      </a>
 
-      <a href="resources.html">Resources</a>
+      <a href="resources.html">
+        Resources
+      </a>
 
-      <a href="about.html">About</a>
+      <a href="about.html">
+        About
+      </a>
 
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">
+        Contact
+      </a>
 
       <a
         class="nav-button"
@@ -173,7 +239,9 @@
     <div class="video-grid">
 
 
-      <!-- VIDEO 1 -->
+      <!-- =====================================
+           VIDEO 1
+      ====================================== -->
 
       <article class="video-card">
 
@@ -223,7 +291,9 @@
 
 
 
-      <!-- VIDEO 2 -->
+      <!-- =====================================
+           VIDEO 2
+      ====================================== -->
 
       <article class="video-card">
 
@@ -273,7 +343,9 @@
 
 
 
-      <!-- VIDEO 3 -->
+      <!-- =====================================
+           VIDEO 3
+      ====================================== -->
 
       <article class="video-card">
 
@@ -324,7 +396,6 @@
 
     </div>
 
-
   </div>
 
 </section>
@@ -339,16 +410,19 @@
 
   <div class="container">
 
-    <div class="cta-box">
+
+    <div class="cta-box video-cta-box">
 
 
       <div class="section-kicker">
         Continue Exploring
       </div>
 
+
       <h2>
         Want More Videos Like These?
       </h2>
+
 
       <p>
         Explore more university comparisons, Online MBA guides,
@@ -357,10 +431,8 @@
       </p>
 
 
-      </div>
-
-
       <div class="hero-buttons">
+
 
         <a
           class="button button-primary"
@@ -371,6 +443,7 @@
           Watch More on YouTube
         </a>
 
+
         <a
           class="button whatsapp-button"
           href="https://wa.me/917208354187?text=Hi%20Nitin%2C%20I%20watched%20your%20CareerDekho%20videos%20and%20I%20have%20a%20query%20regarding%3A%20"
@@ -380,10 +453,12 @@
           Ask CareerDekho
         </a>
 
+
       </div>
 
 
     </div>
+
 
   </div>
 
