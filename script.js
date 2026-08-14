@@ -297,3 +297,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".footer-sub").forEach(function (footerSub) {
+    footerSub.textContent = "Choose with Confidence";
+  });
+});
