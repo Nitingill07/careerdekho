@@ -1,116 +1,1811 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta
+  name="viewport"
+  content="width=device-width,initial-scale=1.0"
+>
+
 <title>Compare Online Universities | CareerDekho</title>
-<meta name="description" content="Shortlist and compare online universities and executive institutions, then request current fees, eligibility and admission guidance.">
-<link rel="stylesheet" href="style.css?v=4">
+
+<meta
+  name="description"
+  content="Compare shortlisted online universities based on your course, priorities and profile with personalised guidance from CareerDekho."
+>
+
+<link rel="stylesheet" href="style.css?v=7">
+
+
+<!-- =========================================
+     PAGE-SPECIFIC COMPARISON STYLES
+========================================= -->
+
+<style>
+
+.compare-hero {
+  background:
+    linear-gradient(
+      135deg,
+      #f8fbff 0%,
+      #eef5ff 100%
+    );
+}
+
+.compare-hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.compare-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compare-hero-icon {
+  width: 210px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.compare-building {
+  font-size: 64px;
+  opacity: 0.3;
+}
+
+.compare-hero-vs {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #1f56b3;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+
+.guided-comparison-section {
+  padding-top: 45px;
+  padding-bottom: 55px;
+}
+
+.guided-comparison-box {
+  background: #ffffff;
+  border: 1px solid #dce5f2;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 14px 40px rgba(27, 58, 110, 0.08);
+}
+
+
+.compare-step {
+  padding: 22px 0;
+  border-bottom: 1px solid #e7edf5;
+}
+
+.compare-step:first-child {
+  padding-top: 0;
+}
+
+.compare-step:last-of-type {
+  border-bottom: none;
+}
+
+.compare-step-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.compare-step-number {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  background: #1f56b3;
+  color: #ffffff;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.compare-step-label {
+  color: #1f56b3;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  margin-bottom: 3px;
+}
+
+.compare-step-title {
+  font-size: 18px;
+  margin: 0;
+  color: #172033;
+}
+
+
+.compare-field {
+  margin-left: 45px;
+}
+
+.compare-field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #172033;
+}
+
+.compare-select,
+.compare-profile-input {
+  width: 100%;
+  border: 1px solid #cad6e7;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 14px 15px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #172033;
+  outline: none;
+}
+
+.compare-select:focus,
+.compare-profile-input:focus {
+  border-color: #1f56b3;
+  box-shadow: 0 0 0 3px rgba(31, 86, 179, 0.08);
+}
+
+.compare-course-wrap {
+  max-width: 520px;
+}
+
+
+.university-selector-row {
+  display: grid;
+  grid-template-columns: 1fr 54px 1fr;
+  gap: 18px;
+  align-items: end;
+}
+
+.compare-vs-badge {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 2px;
+  border-radius: 50%;
+  background: #143f86;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.priority-intro {
+  margin: 0 0 13px;
+  color: #667085;
+  font-size: 14px;
+}
+
+.priority-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.priority-option {
+  border: 1px solid #ced9ea;
+  background: #ffffff;
+  border-radius: 9px;
+  padding: 12px 15px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #344054;
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+
+.priority-option:hover {
+  border-color: #1f56b3;
+}
+
+.priority-option.selected {
+  background: #eef5ff;
+  border-color: #1f56b3;
+  color: #174a9c;
+  font-weight: 700;
+}
+
+.priority-limit-message {
+  margin-top: 10px;
+  color: #a15c00;
+  font-size: 13px;
+  display: none;
+}
+
+
+.compare-profile-input {
+  min-height: 95px;
+  resize: vertical;
+}
+
+
+.comparison-summary {
+  margin-top: 24px;
+  background: #f7faff;
+  border: 1px solid #d9e5f5;
+  border-radius: 12px;
+  padding: 17px 19px;
+}
+
+.comparison-summary-title {
+  font-weight: 800;
+  color: #172033;
+  margin-bottom: 8px;
+}
+
+.comparison-summary p {
+  margin: 3px 0;
+  color: #5d687c;
+  font-size: 14px;
+}
+
+
+.guided-compare-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.compare-whatsapp-button {
+  background: #16a34a;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 9px;
+  padding: 14px 23px;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.compare-whatsapp-button:hover {
+  opacity: 0.92;
+}
+
+.explore-university-button {
+  border: 1px solid #1f56b3;
+  color: #1f56b3 !important;
+  background: #ffffff;
+  text-decoration: none;
+  border-radius: 9px;
+  padding: 14px 20px;
+  font-weight: 700;
+}
+
+.explore-university-button:hover {
+  background: #f1f6ff;
+}
+
+.compare-reassurance {
+  text-align: center;
+  font-size: 12px;
+  color: #667085;
+  margin-top: 11px;
+}
+
+
+.compare-benefits-section {
+  padding-top: 20px;
+}
+
+.compare-benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.compare-benefit-card {
+  background: #ffffff;
+  border: 1px solid #dde6f2;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.compare-benefit-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #eff5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.compare-benefit-card h3 {
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+
+.compare-benefit-card p {
+  color: #667085;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.55;
+}
+
+
+.better-comparison-box {
+  margin-top: 24px;
+  background: #f3f7ff;
+  border: 1px solid #d5e2f5;
+  border-radius: 14px;
+  padding: 25px;
+}
+
+.better-comparison-box h2 {
+  text-align: center;
+  font-size: 21px;
+  margin-bottom: 22px;
+}
+
+.better-comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.better-comparison-item {
+  padding: 0 25px;
+  border-right: 1px solid #d4deed;
+}
+
+.better-comparison-item:last-child {
+  border-right: none;
+}
+
+.better-comparison-item strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #172033;
+}
+
+.better-comparison-item p {
+  margin: 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+
+@media (max-width: 900px) {
+
+  .compare-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-hero-visual {
+    display: none;
+  }
+
+  .compare-benefit-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .better-comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .better-comparison-item {
+    border-right: none;
+    border-bottom: 1px solid #d4deed;
+    padding: 0 0 20px;
+  }
+
+  .better-comparison-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+}
+
+
+@media (max-width: 650px) {
+
+  .guided-comparison-box {
+    padding: 20px 16px;
+  }
+
+  .compare-field {
+    margin-left: 0;
+  }
+
+  .university-selector-row {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-vs-badge {
+    margin: 0 auto;
+  }
+
+  .compare-benefit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guided-compare-actions {
+    flex-direction: column;
+  }
+
+  .compare-whatsapp-button,
+  .explore-university-button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+}
+
+</style>
+
 </head>
+
+
 <body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
 <header class="navbar">
+
   <div class="container nav-inner">
+
     <a class="brand-wrap" href="index.html">
-      <div class="brand">Career<span>Dekho</span></div>
-      <div class="brand-tag">An Initiative by Nitin Gill</div>
+
+      <div class="brand">
+        Career<span>Dekho</span>
+      </div>
+
+      <div class="brand-tag">
+        An Initiative by Nitin Gill
+      </div>
+
     </a>
-    <button class="mobile-toggle" aria-label="Open menu">☰</button>
+
+
+    <button
+      class="mobile-toggle"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+
+
     <nav class="nav-links">
-      <a href="programs.html">Programs</a>
-      <a href="universities.html">Universities</a>
-      <a href="compare-universities.html">Compare Universities</a>
-      <a href="videos.html">Videos</a>
-      <a href="blogs.html">Blogs</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a class="nav-button" href="contact.html#profile-builder">Free Counselling</a>
+
+      <a href="programs.html">
+        Programs
+      </a>
+
+      <a href="universities.html">
+        Universities
+      </a>
+
+      <a href="compare-universities.html">
+        Compare Universities
+      </a>
+
+      <a href="videos.html">
+        Videos
+      </a>
+
+      <a href="blogs.html">
+        Blogs
+      </a>
+
+      <a href="resources.html">
+        Resources
+      </a>
+
+      <a href="about.html">
+        About
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+      <a
+        class="nav-button"
+        href="contact.html#profile-builder"
+      >
+        Free Counselling
+      </a>
+
     </nav>
+
   </div>
+
 </header>
 
+
+
 <main>
-<section class="page-hero">
-  <div class="container">
-    <div class="tag">University Comparison</div>
-    <h1>Compare Two Institutions Side by Side</h1>
-    <p>Choose two options to create a clear comparison request. Current fees, eligibility, specialisations and intake availability should always be verified before admission.</p>
-  </div>
-</section>
 
-<section>
-  <div class="container comparison-builder">
-    <div class="comparison-selectors">
-      <div class="selector-card">
-        <label for="compareA">First institution</label>
-        <select id="compareA" class="comparison-select"></select>
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="page-hero compare-hero">
+
+  <div class="container compare-hero-grid">
+
+
+    <div>
+
+      <div class="tag">
+        University Comparison
       </div>
-      <div class="comparison-vs">VS</div>
-      <div class="selector-card">
-        <label for="compareB">Second institution</label>
-        <select id="compareB" class="comparison-select"></select>
+
+      <h1>
+        Compare the Right Universities for Your Profile
+      </h1>
+
+      <p>
+        Skip generic comparison tables. Choose your course,
+        shortlist two universities and tell us what matters most
+        to you. CareerDekho will help you compare the options
+        according to your profile and priorities.
+      </p>
+
+    </div>
+
+
+    <div class="compare-hero-visual">
+
+      <div class="compare-hero-icon">
+
+        <div class="compare-building">
+          🏫
+        </div>
+
+        <div class="compare-hero-vs">
+          VS
+        </div>
+
+        <div class="compare-building">
+          🏫
+        </div>
+
       </div>
+
     </div>
 
-    <div id="comparisonOutput" class="comparison-output"></div>
 
-    <div class="comparison-note">
-      <strong>Why exact fees are not fixed on this page:</strong>
-      <p>Fees, scholarships, EMI offers, eligibility and program availability can change by intake and specialisation. Use this tool to shortlist, then request the latest verified comparison.</p>
-    </div>
-
-    <div class="comparison-actions">
-      <a id="comparisonWhatsApp" class="button whatsapp-button" href="https://wa.me/917208354187" target="_blank" rel="noopener noreferrer">Request Latest Comparison on WhatsApp</a>
-      <a class="button button-secondary" href="universities.html">Browse All Options</a>
-    </div>
   </div>
+
 </section>
 
-<section class="light-section">
+
+
+<!-- =========================================
+     GUIDED COMPARISON TOOL
+========================================= -->
+
+<section class="guided-comparison-section">
+
   <div class="container">
-    <div class="section-heading"><div class="section-kicker">What to compare</div><h2>Go Beyond the University Name</h2><p>A useful comparison should consider the complete learning and career fit.</p></div>
-    <div class="cards">
-      <div class="card"><div class="card-icon">✓</div><h3>Recognition & Credential</h3><p>Verify the institution, program, mode and intake.</p></div>
-      <div class="card"><div class="card-icon">₹</div><h3>Total Cost</h3><p>Compare tuition, examination charges, EMI and other costs.</p></div>
-      <div class="card"><div class="card-icon">▶</div><h3>Learning Format</h3><p>Understand live classes, recordings, assignments and examinations.</p></div>
-      <div class="card"><div class="card-icon">🎯</div><h3>Career Fit</h3><p>Match the curriculum and format with your experience and goals.</p></div>
-      <div class="card"><div class="card-icon">🧩</div><h3>Specialisations</h3><p>Check whether the relevant specialisation is available for your intake.</p></div>
-      <div class="card"><div class="card-icon">🤝</div><h3>Student Support</h3><p>Compare academic, technical and administrative support systems.</p></div>
+
+    <div class="guided-comparison-box">
+
+
+      <!-- =====================================
+           STEP 1
+      ====================================== -->
+
+      <div class="compare-step">
+
+        <div class="compare-step-header">
+
+          <div class="compare-step-number">
+            1
+          </div>
+
+          <div>
+
+            <div class="compare-step-label">
+              Step 1
+            </div>
+
+            <h2 class="compare-step-title">
+              Choose your course
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="compare-field compare-course-wrap">
+
+          <select
+            id="guidedCourse"
+            class="compare-select"
+          >
+
+            <option value="Online MBA">
+              Online MBA
+            </option>
+
+            <option value="Online MCA">
+              Online MCA
+            </option>
+
+            <option value="Online M.Com">
+              Online M.Com
+            </option>
+
+            <option value="Online MA">
+              Online MA
+            </option>
+
+            <option value="Online M.Sc">
+              Online M.Sc
+            </option>
+
+            <option value="Online BBA">
+              Online BBA
+            </option>
+
+            <option value="Online BCA">
+              Online BCA
+            </option>
+
+            <option value="Online B.Com">
+              Online B.Com
+            </option>
+
+            <option value="Online BA">
+              Online BA
+            </option>
+
+            <option value="Online B.Sc">
+              Online B.Sc
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================
+           STEP 2
+      ====================================== -->
+
+      <div class="compare-step">
+
+        <div class="compare-step-header">
+
+          <div class="compare-step-number">
+            2
+          </div>
+
+          <div>
+
+            <div class="compare-step-label">
+              Step 2
+            </div>
+
+            <h2 class="compare-step-title">
+              Select universities to compare
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="compare-field">
+
+          <div class="university-selector-row">
+
+
+            <div>
+
+              <label for="guidedUniversityA">
+                First university
+              </label>
+
+              <select
+                id="guidedUniversityA"
+                class="compare-select"
+              >
+              </select>
+
+            </div>
+
+
+            <div class="compare-vs-badge">
+              VS
+            </div>
+
+
+            <div>
+
+              <label for="guidedUniversityB">
+                Second university
+              </label>
+
+              <select
+                id="guidedUniversityB"
+                class="compare-select"
+              >
+              </select>
+
+            </div>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================
+           STEP 3
+      ====================================== -->
+
+      <div class="compare-step">
+
+        <div class="compare-step-header">
+
+          <div class="compare-step-number">
+            3
+          </div>
+
+          <div>
+
+            <div class="compare-step-label">
+              Step 3
+            </div>
+
+            <h2 class="compare-step-title">
+              What matters most to you?
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="compare-field">
+
+          <p class="priority-intro">
+            Select up to 4 priorities.
+          </p>
+
+
+          <div
+            class="priority-options"
+            id="priorityOptions"
+          >
+
+            <button
+              type="button"
+              class="priority-option"
+              data-priority="Fees & Affordability"
+            >
+              💳 Fees
+            </button>
+
+            <button
+              type="button"
+              class="priority-option"
+              data-priority="Brand Value"
+            >
+              ⭐ Brand Value
+            </button>
+
+            <button
+              type="button"
+              class="priority-option"
+              data-priority="Flexibility"
+            >
+              🕒 Flexibility
+            </button>
+
+            <button
+              type="button"
+              class="priority-option"
+              data-priority="Specialisations"
+            >
+              🎓 Specialisation
+            </button>
+
+            <button
+              type="button"
+              class="priority-option"
+              data-priority="Examination Format"
+            >
+              📝 Exams
+            </button>
+
+            <button
+              type="button"
+              class="priority-option"
+              data-priority="Placement Support"
+            >
+              💼 Placements
+            </button>
+
+            <button
+              type="button"
+              class="priority-option"
+              data-priority="Career & Student Support"
+            >
+              🤝 Career Support
+            </button>
+
+          </div>
+
+
+          <div
+            id="priorityLimitMessage"
+            class="priority-limit-message"
+          >
+            You can select up to 4 priorities.
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================
+           STEP 4
+      ====================================== -->
+
+      <div class="compare-step">
+
+        <div class="compare-step-header">
+
+          <div class="compare-step-number">
+            4
+          </div>
+
+          <div>
+
+            <div class="compare-step-label">
+              Step 4
+            </div>
+
+            <h2 class="compare-step-title">
+              Tell us anything important about your profile
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="compare-field">
+
+          <textarea
+            id="guidedProfile"
+            class="compare-profile-input"
+            maxlength="300"
+            placeholder="For example: B.Com graduate, 3 years of experience, ₹2 lakh budget, looking for career growth..."
+          ></textarea>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =====================================
+           LIVE SUMMARY
+      ====================================== -->
+
+      <div
+        class="comparison-summary"
+        id="comparisonSummary"
+      >
+
+        <div class="comparison-summary-title">
+          Your comparison request
+        </div>
+
+        <p id="summaryCourse">
+          Course: Online MBA
+        </p>
+
+        <p id="summaryUniversities">
+          Comparing: NMIMS Online vs Manipal University Jaipur
+        </p>
+
+        <p id="summaryPriorities">
+          Priorities: Not selected yet
+        </p>
+
+      </div>
+
+
+
+      <!-- =====================================
+           ACTIONS
+      ====================================== -->
+
+      <div class="guided-compare-actions">
+
+        <a
+          id="guidedWhatsApp"
+          class="compare-whatsapp-button"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ☎ Compare These for My Profile on WhatsApp
+        </a>
+
+
+        <a
+          id="exploreUniversityA"
+          class="explore-university-button"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore NMIMS Online →
+        </a>
+
+
+        <a
+          id="exploreUniversityB"
+          class="explore-university-button"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Explore Manipal University Jaipur →
+        </a>
+
+      </div>
+
+
+      <div class="compare-reassurance">
+        100% Free • No obligation • Get guidance based on your selected course and priorities
+      </div>
+
+
     </div>
+
   </div>
+
 </section>
+
+
+
+<!-- =========================================
+     WHAT YOU GET
+========================================= -->
+
+<section class="light-section compare-benefits-section">
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <div class="section-kicker">
+        Personalised Comparison
+      </div>
+
+      <h2>
+        What You'll Get from CareerDekho
+      </h2>
+
+      <p>
+        A useful comparison should help you make a decision,
+        not just show two university names side by side.
+      </p>
+
+    </div>
+
+
+
+    <div class="compare-benefit-grid">
+
+
+      <div class="compare-benefit-card">
+
+        <div class="compare-benefit-icon">
+          👤
+        </div>
+
+        <h3>
+          Profile-Based Recommendation
+        </h3>
+
+        <p>
+          Understand which option may fit your education,
+          experience, budget and career goal better.
+        </p>
+
+      </div>
+
+
+
+      <div class="compare-benefit-card">
+
+        <div class="compare-benefit-icon">
+          ✓
+        </div>
+
+        <h3>
+          What to Verify Before Admission
+        </h3>
+
+        <p>
+          Know the important recognition, eligibility,
+          examination and program details to verify.
+        </p>
+
+      </div>
+
+
+
+      <div class="compare-benefit-card">
+
+        <div class="compare-benefit-icon">
+          ⚖️
+        </div>
+
+        <h3>
+          Course-Level Comparison
+        </h3>
+
+        <p>
+          Compare the factors that actually matter for
+          your selected course and career requirement.
+        </p>
+
+      </div>
+
+
+
+      <div class="compare-benefit-card">
+
+        <div class="compare-benefit-icon">
+          ₹
+        </div>
+
+        <h3>
+          Latest Fee & Intake Guidance
+        </h3>
+
+        <p>
+          Check current fees, available intake information
+          and relevant updates before taking admission.
+        </p>
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================
+         WHY THIS WORKS
+    ====================================== -->
+
+    <div class="better-comparison-box">
+
+      <h2>
+        Why This Works Better Than a Generic Comparison Table
+      </h2>
+
+
+      <div class="better-comparison-grid">
+
+
+        <div class="better-comparison-item">
+
+          <strong>
+            🎯 Course-Specific Guidance
+          </strong>
+
+          <p>
+            Compare what is relevant to your chosen
+            course instead of generic university information.
+          </p>
+
+        </div>
+
+
+
+        <div class="better-comparison-item">
+
+          <strong>
+            👥 Based on Your Priorities
+          </strong>
+
+          <p>
+            Focus on what matters most to you — fees,
+            flexibility, specialisation, exams or career support.
+          </p>
+
+        </div>
+
+
+
+        <div class="better-comparison-item">
+
+          <strong>
+            ⚡ Shortlist Faster
+          </strong>
+
+          <p>
+            Get clarity on what to check before choosing
+            between the universities you have shortlisted.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
 </main>
 
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
 <footer>
+
   <div class="container">
+
     <div class="footer-grid">
+
+
       <div>
-        <div class="footer-brand">CareerDekho</div>
-        <div class="footer-sub">An Initiative by Nitin Gill</div>
-        <p>Guidance for online degrees, Executive Programs and university certification programs in India and abroad.</p>
+
+        <div class="footer-brand">
+          CareerDekho
+        </div>
+
+        <div class="footer-sub">
+          An Initiative by Nitin Gill
+        </div>
+
+        <p>
+          Guidance for online degrees, Executive Programs
+          and university certification programs in India and abroad.
+        </p>
+
       </div>
+
+
+
       <div>
-        <h3>Explore</h3>
-        <a href="programs.html">Programs</a>
-        <a href="universities.html">Universities</a>
-        <a href="compare-universities.html">Compare Universities</a>
-        <a href="videos.html">Videos</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="resources.html">Resources</a>
+
+        <h3>
+          Explore
+        </h3>
+
+        <a href="programs.html">
+          Programs
+        </a>
+
+        <a href="universities.html">
+          Universities
+        </a>
+
+        <a href="compare-universities.html">
+          Compare Universities
+        </a>
+
+        <a href="videos.html">
+          Videos
+        </a>
+
+        <a href="blogs.html">
+          Blogs
+        </a>
+
+        <a href="resources.html">
+          Resources
+        </a>
+
       </div>
+
+
+
       <div>
-        <h3>Connect</h3>
-        <a href="https://wa.me/917208354187" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-        <a href="https://www.youtube.com/@nitin.careerdekho" target="_blank" rel="noopener noreferrer">YouTube</a>
-        <a href="https://www.linkedin.com/in/nitin-gill-b37824372/?skipRedirect=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="about.html">About Nitin</a>
-        <a href="contact.html">Contact</a>
+
+        <h3>
+          Connect
+        </h3>
+
+        <a
+          href="https://wa.me/917208354187"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
+
+        <a
+          href="https://www.youtube.com/@nitin.careerdekho"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          YouTube
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/nitin-gill-b37824372/?skipRedirect=true"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a href="about.html">
+          About Nitin
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
       </div>
+
+
     </div>
-    <div class="copyright">© 2026 CareerDekho. All rights reserved.</div>
+
+
+    <div class="copyright">
+      © 2026 CareerDekho. All rights reserved.
+    </div>
+
   </div>
+
 </footer>
-<a class="floating-whatsapp" href="https://wa.me/917208354187" target="_blank" rel="noopener noreferrer" aria-label="Chat with CareerDekho on WhatsApp">☎</a>
-<script src="script.js?v=7"></script>
+
+
+
+<!-- =========================================
+     FLOATING WHATSAPP
+========================================= -->
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/917208354187"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with CareerDekho on WhatsApp"
+>
+  ☎
+</a>
+
+
+
+<!-- =========================================
+     EXISTING SITE SCRIPT
+========================================= -->
+
+<script src="script.js?v=8"></script>
+
+
+
+<!-- =========================================
+     GUIDED COMPARISON SCRIPT
+========================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+  /* =========================================
+     UNIVERSITY DATABASE
+  ========================================= */
+
+  const universities = [
+
+    {
+      name: "NMIMS Online",
+      url: "https://cvadm.com/UhFsd4"
+    },
+
+    {
+      name: "Manipal University Jaipur",
+      url: "https://cvadm.com/RGaKNU"
+    },
+
+    {
+      name: "Amity University Online",
+      url: "https://cvadm.com/cgQIxI"
+    },
+
+    {
+      name: "DPU Pune",
+      url: "https://cvadm.com/3Tvxwx"
+    },
+
+    {
+      name: "Lovely Professional University",
+      url: "https://cvadm.com/eW0xID"
+    },
+
+    {
+      name: "Uttaranchal University",
+      url: "https://cvadm.com/sLKuhx"
+    },
+
+    {
+      name: "Chandigarh University Online",
+      url: "https://cvadm.com/vxhsoE"
+    },
+
+    {
+      name: "GLA University",
+      url: "https://cvadm.com/k6vqwp"
+    },
+
+    {
+      name: "Shoolini University",
+      url: "https://shoolini.universityadmission.co.in/?source_campaign=LAM%20Influencer&campaign_name=6152&ad_group_name=General&ads_name=ShooliniUnivesityAll"
+    },
+
+    {
+      name: "Kurukshetra University",
+      url: "https://kurukshetra.universityadmission.co.in/?source_campaign=LAM%20Influencer&campaign_name=6152&ad_group_name=General&ads_name=KurukshetraUniversityAll"
+    },
+
+    {
+      name: "Sikkim Manipal University",
+      url: "https://smu.universityadmission.co.in/?source_campaign=LAM%20Influencer&campaign_name=6152&ad_group_name=General&ads_name=SMUUniversityAll"
+    },
+
+    {
+      name: "Andhra University",
+      url: "https://cvadm.com/ahxBKY"
+    },
+
+    {
+      name: "Vivekananda Global University",
+      url: "https://cvadm.com/1iAQm8"
+    },
+
+    {
+      name: "UPES Online",
+      url: "https://cvadm.com/czJdy9"
+    },
+
+    {
+      name: "Galgotias University",
+      url: "https://cvadm.com/yZvYS2"
+    },
+
+    {
+      name: "DPU Mumbai",
+      url: "https://cvadm.com/v2WaN8"
+    },
+
+    {
+      name: "Parul University",
+      url: "https://cvadm.com/emkRtX"
+    },
+
+    {
+      name: "Amrita University Online",
+      url: "https://cvadm.com/TzypzE"
+    }
+
+  ];
+
+
+
+  const courseSelect =
+    document.getElementById("guidedCourse");
+
+  const universityASelect =
+    document.getElementById("guidedUniversityA");
+
+  const universityBSelect =
+    document.getElementById("guidedUniversityB");
+
+  const profileInput =
+    document.getElementById("guidedProfile");
+
+  const priorityButtons =
+    document.querySelectorAll(".priority-option");
+
+  const priorityLimitMessage =
+    document.getElementById("priorityLimitMessage");
+
+  const summaryCourse =
+    document.getElementById("summaryCourse");
+
+  const summaryUniversities =
+    document.getElementById("summaryUniversities");
+
+  const summaryPriorities =
+    document.getElementById("summaryPriorities");
+
+  const whatsappButton =
+    document.getElementById("guidedWhatsApp");
+
+  const exploreA =
+    document.getElementById("exploreUniversityA");
+
+  const exploreB =
+    document.getElementById("exploreUniversityB");
+
+
+
+  let selectedPriorities = [];
+
+
+
+  /* =========================================
+     POPULATE UNIVERSITY DROPDOWNS
+  ========================================= */
+
+  function populateUniversities() {
+
+    universities.forEach(function (university, index) {
+
+      const optionA =
+        document.createElement("option");
+
+      optionA.value = index;
+      optionA.textContent = university.name;
+
+
+      const optionB =
+        document.createElement("option");
+
+      optionB.value = index;
+      optionB.textContent = university.name;
+
+
+      universityASelect.appendChild(optionA);
+
+      universityBSelect.appendChild(optionB);
+
+    });
+
+
+    /* Default comparison */
+
+    universityASelect.value = "0";
+
+    universityBSelect.value = "1";
+
+  }
+
+
+
+  /* =========================================
+     PRIORITIES
+  ========================================= */
+
+  priorityButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+      const priority =
+        button.dataset.priority;
+
+
+      if (selectedPriorities.includes(priority)) {
+
+        selectedPriorities =
+          selectedPriorities.filter(function (item) {
+            return item !== priority;
+          });
+
+        button.classList.remove("selected");
+
+        priorityLimitMessage.style.display = "none";
+
+
+      } else {
+
+
+        if (selectedPriorities.length >= 4) {
+
+          priorityLimitMessage.style.display = "block";
+
+          return;
+
+        }
+
+
+        selectedPriorities.push(priority);
+
+        button.classList.add("selected");
+
+        priorityLimitMessage.style.display = "none";
+
+      }
+
+
+      updateComparison();
+
+    });
+
+  });
+
+
+
+  /* =========================================
+     BUILD WHATSAPP MESSAGE
+  ========================================= */
+
+  function buildWhatsAppMessage() {
+
+    const course =
+      courseSelect.value;
+
+    const universityA =
+      universities[universityASelect.value];
+
+    const universityB =
+      universities[universityBSelect.value];
+
+    const profile =
+      profileInput.value.trim();
+
+
+    let message =
+      "Hi Nitin, I want help comparing " +
+      universityA.name +
+      " vs " +
+      universityB.name +
+      " for " +
+      course +
+      ".";
+
+
+    if (selectedPriorities.length > 0) {
+
+      message +=
+        "\n\nMy main priorities are: " +
+        selectedPriorities.join(", ") +
+        ".";
+
+    }
+
+
+    if (profile) {
+
+      message +=
+        "\n\nMy profile/details: " +
+        profile;
+
+    }
+
+
+    message +=
+      "\n\nPlease guide me on which option may suit my profile better and what I should verify before taking admission.";
+
+
+    return (
+      "https://wa.me/917208354187?text=" +
+      encodeURIComponent(message)
+    );
+
+  }
+
+
+
+  /* =========================================
+     UPDATE PAGE
+  ========================================= */
+
+  function updateComparison() {
+
+    const course =
+      courseSelect.value;
+
+    const universityA =
+      universities[universityASelect.value];
+
+    const universityB =
+      universities[universityBSelect.value];
+
+
+    summaryCourse.textContent =
+      "Course: " + course;
+
+
+    summaryUniversities.textContent =
+      "Comparing: " +
+      universityA.name +
+      " vs " +
+      universityB.name;
+
+
+    if (selectedPriorities.length > 0) {
+
+      summaryPriorities.textContent =
+        "Priorities: " +
+        selectedPriorities.join(", ");
+
+    } else {
+
+      summaryPriorities.textContent =
+        "Priorities: Not selected yet";
+
+    }
+
+
+    whatsappButton.href =
+      buildWhatsAppMessage();
+
+
+    exploreA.href =
+      universityA.url;
+
+    exploreA.textContent =
+      "Explore " +
+      universityA.name +
+      " →";
+
+
+    exploreB.href =
+      universityB.url;
+
+    exploreB.textContent =
+      "Explore " +
+      universityB.name +
+      " →";
+
+  }
+
+
+
+  /* =========================================
+     PREVENT SAME UNIVERSITY
+  ========================================= */
+
+  function preventSameUniversity(changedSelector) {
+
+    if (
+      universityASelect.value ===
+      universityBSelect.value
+    ) {
+
+      let currentIndex =
+        parseInt(changedSelector.value, 10);
+
+
+      let replacementIndex =
+        (currentIndex + 1) %
+        universities.length;
+
+
+      if (changedSelector === universityASelect) {
+
+        universityBSelect.value =
+          replacementIndex;
+
+      } else {
+
+        universityASelect.value =
+          replacementIndex;
+
+      }
+
+    }
+
+  }
+
+
+
+  /* =========================================
+     EVENTS
+  ========================================= */
+
+  courseSelect.addEventListener(
+    "change",
+    updateComparison
+  );
+
+
+  universityASelect.addEventListener(
+    "change",
+    function () {
+
+      preventSameUniversity(
+        universityASelect
+      );
+
+      updateComparison();
+
+    }
+  );
+
+
+  universityBSelect.addEventListener(
+    "change",
+    function () {
+
+      preventSameUniversity(
+        universityBSelect
+      );
+
+      updateComparison();
+
+    }
+  );
+
+
+  profileInput.addEventListener(
+    "input",
+    updateComparison
+  );
+
+
+
+  /* =========================================
+     INITIALISE
+  ========================================= */
+
+  populateUniversities();
+
+  updateComparison();
+
+
+});
+
+</script>
+
+
 </body>
+
 </html>
