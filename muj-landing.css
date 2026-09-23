@@ -1,20 +1,20 @@
 :root{
-  --ink:#10231c;
-  --muted:#627168;
-  --green:#0d6b4b;
-  --green-deep:#0a533b;
-  --green-2:#16855f;
-  --green-soft:#eaf7f1;
-  --orange:#f47c20;
-  --orange-2:#ff9f55;
-  --orange-soft:#fff1e6;
-  --cream:#fbfaf6;
-  --cream-2:#f4f1e9;
-  --navy:#142a22;
-  --line:#dfe9e3;
+  --ink:#252039;
+  --muted:#6f6982;
+  --green:#6c57b5;
+  --green-deep:#514096;
+  --green-2:#846fd0;
+  --green-soft:#f0ecff;
+  --orange:#ff7800;
+  --orange-2:#ff9d47;
+  --orange-soft:#fff0e2;
+  --cream:#fbf9ff;
+  --cream-2:#f3efff;
+  --navy:#32265f;
+  --line:#e5def2;
   --white:#fff;
-  --shadow:0 20px 65px rgba(17,52,39,.11);
-  --shadow-lg:0 32px 90px rgba(7,42,29,.16);
+  --shadow:0 20px 65px rgba(75,55,139,.11);
+  --shadow-lg:0 32px 90px rgba(59,42,119,.17);
   --radius:24px;
 }
 *{box-sizing:border-box}
@@ -76,3 +76,81 @@ h1{font-size:62px;line-height:.98;letter-spacing:-3.2px;margin:18px 0 20px;max-w
   .announcement{display:none}.shell{width:min(100% - 28px,1180px)}.desktop-only,.text-link{display:none}.nav-wrap{min-height:62px}.nav-actions{gap:8px}.btn-outline{font-size:10px;padding:11px 13px}.hero{padding:42px 0 50px}.hero-grid{gap:30px}.hero-copy{padding-top:0}h1{font-size:43px;letter-spacing:-2px}.hero-lead{font-size:15px}.hero-proof-row{gap:6px}.hero-proof-row span{font-size:9px;padding:7px 9px}.hero-cta-row .btn{width:100%}.hero-side{grid-template-columns:1fr}.university-visual{min-height:330px}.lead-card{padding:21px;border-radius:21px}.section{padding:62px 0}.quick-summary{padding:45px 0 0}.summary-card{padding:22px}.summary-grid{grid-template-columns:repeat(2,1fr)}.split-head{display:block}.split-head p{text-align:left;margin-top:13px}.program-grid,.benefit-grid,.timeline,.career-support-grid{grid-template-columns:1fr}.program-card{min-height:315px}.benefit-grid article{min-height:215px}.specialisation-grid{grid-template-columns:repeat(2,1fr)}.mba-copy h2{font-size:38px}.mba-stats{grid-template-columns:1fr 1fr 1fr}.offer-cards{grid-template-columns:1fr}.degree-paper{width:96%}.comparison-card{padding:30px 24px;border-radius:24px}.comparison-card h2{font-size:30px}.comparison-actions{display:grid}.faq-grid{gap:34px}.footer-grid{grid-template-columns:1fr;gap:30px}.legal-row{display:block}.mobile-bar{display:grid}.footer{padding-bottom:110px}.modal-dialog{padding:24px}.section-head h2,.fit-copy h2,.faq-intro h2,.scholarship-copy h2,.degree-copy h2{font-size:35px}.brand{font-size:21px}.trust-strip article{justify-content:flex-start;padding:15px 10px}.trust-icon{width:38px;height:38px;font-size:11px}.trust-strip b{font-size:10px}.trust-strip span{font-size:8px}.summary-intro h2{font-size:28px}.source-inner{grid-template-columns:1fr}.source-links{grid-column:auto}.admission-help{display:grid}.admission-help .btn{width:100%}
 }
 @media(max-width:430px){.visual-stat-row b{font-size:14px}.visual-copy strong{font-size:20px}.summary-grid{grid-template-columns:1fr 1fr}.mba-stats b{font-size:17px}.specialisation-grid{grid-template-columns:1fr}.trust-strip-grid{grid-template-columns:1fr 1fr}.program-card{padding:19px}}
+
+
+/* V3 - MUJ / Manipal visual identity */
+.topbar{border-bottom-color:rgba(108,87,181,.10)}
+.brand-with-logo{flex-direction:row;align-items:center;gap:10px;line-height:1;letter-spacing:0}
+.brand-logo-img{width:46px;height:46px;border-radius:50%;object-fit:cover;display:block;flex:0 0 auto}
+.brand-copy{display:flex!important;flex-direction:column;color:var(--ink)!important}
+.brand-copy b{font-size:18px;letter-spacing:-.45px;line-height:1;font-weight:950}
+.brand-copy small{font-size:8px!important;margin-top:5px!important;letter-spacing:.65px!important;color:var(--muted)!important}
+.footer-brand .brand-copy b{color:#fff}.footer-brand .brand-copy small{color:#c9bee9!important}
+.announcement{background:linear-gradient(90deg,#3b2c75,#6c57b5);color:#eee9ff}
+.announcement-link{color:#ffb976}
+.text-link{color:#4e4762}
+.btn-primary{background:var(--orange);box-shadow:0 12px 26px rgba(255,120,0,.22)}
+.btn-primary:hover{background:#e96c00}
+.btn-outline{border-color:var(--orange);color:#d96700}
+.btn-ghost{border-color:rgba(108,87,181,.20);color:var(--green);background:rgba(255,255,255,.82)}
+.hero{background:linear-gradient(135deg,#fbf9ff 0%,#f4efff 58%,#fff4e9 100%)}
+.hero:after{background:linear-gradient(90deg,transparent,#dfd6f2,transparent)}
+.hero-orb-a{background:radial-gradient(circle,#ffd9b5 0%,rgba(255,217,181,0) 70%)}
+.hero-orb-b{background:radial-gradient(circle,#ddd3ff 0%,rgba(221,211,255,0) 70%)}
+h1 em{color:var(--green)}
+.hero-lead{color:#686178}.hero-proof-row span{border-color:#e4dcf2;color:#655e73}
+.avatar-mark{background:linear-gradient(145deg,#493a8b,#6c57b5);box-shadow:0 8px 25px rgba(80,58,151,.22)}
+.university-visual{background:linear-gradient(145deg,#4a378d,#765fc5)}
+.university-visual:after{background:radial-gradient(circle,rgba(255,146,57,.38),transparent 70%)}
+.visual-year{color:#ffc28c}.visual-copy small{color:#d9d0fa}.visual-copy p,.visual-stat-row span{color:#ded7f4}
+.campus-dome{background:linear-gradient(180deg,#ffb066,#f47b20)}
+.campus-building{background:linear-gradient(180deg,#fff0e5,#f2c8a6)}
+.live-dot{background:#ff7800;box-shadow:0 0 0 5px #fff0e2}
+.lead-card input:focus,.lead-card select:focus,.modal input:focus,.modal select:focus,.phone-wrap:focus-within{border-color:#ab9be0;box-shadow:0 0 0 3px #f0ecff}
+.summary-card{background:linear-gradient(135deg,#f7f3ff,#fff8f1);border-color:#e7def4}
+.quick-summary,.programs,.career-section,.admissions{background:#fff}
+.fit-section,.faq{background:#faf8ff}
+.mba-section{background:linear-gradient(135deg,#33265f 0%,#57449b 100%)}
+.decision-card{background:linear-gradient(155deg,#352861,#564298)}
+.decision-head span{color:#c9bdf1}.decision-row>span{color:#ffb16f}.decision-row p{color:#cfc6eb}
+.comparison-card{background:linear-gradient(115deg,#5c49a7 0%,#765cc7 58%,#ef7b2d 140%);box-shadow:0 22px 50px rgba(87,66,155,.23)}
+.btn-light{color:#514096}
+.source-section{background:#f4f0fb;border-top-color:#e1d8f0}.source-inner{grid-template-columns:.65fr 1.8fr}.source-inner span{color:#827a95}.source-inner p{color:#746d86}
+.footer{background:#2c2254;color:#e8e2f7}.footer-grid p{color:#bdb4d4}.footer-grid a{color:#d4cbea}.legal-row{border-top-color:#4a3a78}.legal-row p{color:#aaa0c5}
+.mobile-enquire{background:var(--orange)}.mobile-wa{background:#f0ecff;color:#5a469f}
+.modal-backdrop{background:rgba(38,27,77,.68)}
+
+/* Authentic sample MUJ degree images from Online Manipal */
+.degree-section{background:linear-gradient(180deg,#fbf9ff,#f5f0ff)}
+.degree-image-stack{position:relative;width:min(520px,94%);margin:0 auto 10px;min-height:350px}
+.degree-image-stack img{display:block;width:88%;border-radius:18px;box-shadow:0 22px 60px rgba(55,40,97,.18);border:1px solid #e5dff0;background:#fff}
+.degree-image-stack .degree-back{position:absolute;width:72%;right:-1%;bottom:-10%;transform:rotate(2deg);box-shadow:0 18px 50px rgba(55,40,97,.15)}
+.preview-label{display:block;font-size:9px;color:#787087;margin-top:32px}
+.degree-copy p{font-size:13px;color:var(--muted)}
+.degree-points span{border-color:#ddd3f3;background:#fff;color:var(--green)}
+.degree-paper,.degree-seal,.degree-brand,.degree-line,.degree-signatures{display:none!important}
+
+@media(max-width:760px){
+  .brand-logo-img{width:40px;height:40px}.brand-copy b{font-size:16px}.brand-copy small{font-size:7px!important}
+  .degree-image-stack{min-height:275px;width:100%}.degree-image-stack img{width:94%}.degree-image-stack .degree-back{width:74%;right:0;bottom:-5%}.preview-label{margin-top:24px}
+}
+
+/* V3.1: Match CareerDekho main-site footer — text branding only */
+.footer-brand-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-brand-text > strong {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin-bottom: .65rem;
+}
+.footer-brand-text > span {
+  font-size: .9rem;
+  opacity: .82;
+  margin-bottom: .85rem;
+}
+.footer-brand-text > p {
+  margin: 0;
+}
