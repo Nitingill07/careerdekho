@@ -1,0 +1,7 @@
+REPLACE THESE FILES ON GITHUB
+
+Upload ALL 17 .html files plus university-landing.css to the ROOT of the careerdekho repository.
+These files must overwrite the existing files with the exact same names.
+
+After commit, verify amity-online.html on GitHub shows: university-landing.css?v=2 and class="uni-visual visual-pillar".
+Then test https://mycareerdekho.in/amity-online.html?v=2
