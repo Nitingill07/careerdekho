@@ -41,3 +41,8 @@
 .visual-campus::after{content:"";position:absolute;inset:0;background:rgba(255,255,255,.08);z-index:-1}
 .visual-campus img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;position:relative;z-index:1}
 @media(max-width:680px){.visual-campus{height:235px}}
+
+/* v7 image ratio fix */
+.visual-campus{width:100%;height:auto!important;aspect-ratio:16/9;overflow:hidden;background:#e9eef7}
+.visual-campus img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+@media(max-width:680px){.visual-campus{height:auto!important;aspect-ratio:16/9}}
