@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -17,205 +20,33 @@
 <link rel="stylesheet" href="style.css?v=7">
 
 <style>
-
-/* =========================================
-   ONLINE UNIVERSITY CARD IMAGES
-========================================= */
-
-#online-universities .directory-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  gap: 18px !important;
-  width: 100% !important;
+/* Online university campus thumbnails only — preserve existing card/grid layout */
+#online-universities .brand-tile{
+  width:88px;
+  height:72px;
+  min-width:88px;
+  padding:0;
+  overflow:hidden;
+  border-radius:12px;
+  flex-shrink:0;
+  background:#eef4ff;
 }
-
-
-/* CARD */
-
-#online-universities .institution-card {
-  display: grid !important;
-  grid-template-columns: 88px minmax(0, 1fr) !important;
-  align-items: center !important;
-  gap: 16px !important;
-
-  width: 100% !important;
-  min-width: 0 !important;
-  min-height: 122px !important;
-
-  padding: 18px !important;
-
-  background: #ffffff !important;
-
-  border: 1px solid #dce4f0 !important;
-  border-radius: 15px !important;
-
-  text-decoration: none !important;
-
-  overflow: hidden !important;
-
-  box-sizing: border-box !important;
+#online-universities .brand-tile img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
 }
-
-
-/* CAMPUS IMAGE */
-
-#online-universities .university-thumb {
-  width: 88px !important;
-  height: 72px !important;
-  min-width: 88px !important;
-
-  display: block !important;
-
-  border-radius: 12px !important;
-  overflow: hidden !important;
-
-  background: #eef4ff !important;
-
-  border: 1px solid #d8e2f2 !important;
-
-  box-shadow:
-    0 6px 16px rgba(18, 52, 100, 0.08) !important;
-}
-
-
-#online-universities .university-thumb img {
-  width: 100% !important;
-  height: 100% !important;
-
-  display: block !important;
-
-  object-fit: cover !important;
-  object-position: center !important;
-}
-
-
-/* TEXT AREA */
-
-#online-universities .institution-card > div {
-  width: 100% !important;
-  min-width: 0 !important;
-}
-
-
-/* UNIVERSITY NAME */
-
-#online-universities .institution-card h3 {
-  margin: 0 0 5px 0 !important;
-
-  font-size: 18px !important;
-  line-height: 1.25 !important;
-
-  color: #172033 !important;
-}
-
-
-/* DESCRIPTION */
-
-#online-universities .institution-card p {
-  margin: 0 !important;
-
-  font-size: 14px !important;
-  line-height: 1.5 !important;
-
-  color: #667085 !important;
-}
-
-
-/* HOVER */
-
-#online-universities .institution-card:hover {
-  transform: translateY(-2px);
-
-  border-color: #b9cbea !important;
-
-  box-shadow:
-    0 12px 30px rgba(24, 59, 110, 0.10) !important;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 900px) {
-
-  #online-universities .directory-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr)) !important;
-  }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 620px) {
-
-  #online-universities .directory-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  #online-universities .institution-card {
-    grid-template-columns:
-      82px minmax(0, 1fr) !important;
-
-    min-height: 108px !important;
-
-    padding: 14px !important;
-  }
-
-  #online-universities .university-thumb {
-    width: 82px !important;
-    height: 68px !important;
-    min-width: 82px !important;
-  }
-
-  #online-universities .institution-card h3 {
-    font-size: 17px !important;
-  }
-
-  #online-universities .institution-card p {
-    font-size: 13px !important;
-  }
-
-}
-
-</style>
-
-</head>
-/* University directory campus thumbnails */
-
-.university-thumb {
-  width: 72px;
-  height: 72px;
-  flex: 0 0 72px;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid #d8e2f2;
-  background: #eef3fb;
-  box-shadow: 0 8px 20px rgba(18, 52, 100, 0.08);
-}
-
-.university-thumb img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  object-position: center;
-}
-
-@media (max-width: 640px) {
-  .university-thumb {
-    width: 64px;
-    height: 64px;
-    flex-basis: 64px;
-    border-radius: 14px;
+@media(max-width:620px){
+  #online-universities .brand-tile{
+    width:82px;
+    height:68px;
+    min-width:82px;
   }
 }
 </style>
-  
+
 </head>
 
 
@@ -437,603 +268,601 @@
       <div class="directory-grid">
 
 
-        <div class="directory-grid">
+        <!-- 1. MANIPAL UNIVERSITY JAIPUR -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="manipal university jaipur muj online manipal"
+          href="/muj-online.html"
+        >
 
-  <!-- 1. MANIPAL UNIVERSITY JAIPUR -->
+          <span class="brand-tile">
+            <img
+              src="images/muj-online-campus.jpg"
+              alt="Manipal University Jaipur campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="manipal university jaipur muj online manipal"
-    href="/muj-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/muj-online-campus.jpg"
-        alt="Manipal University Jaipur campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Manipal University Jaipur
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Manipal University Jaipur
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 2. AMITY UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="amity university online"
+          href="/amity-online.html"
+        >
 
-  <!-- 2. AMITY UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/amity-online-campus.jpg"
+              alt="Amity University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="amity university online"
-    href="/amity-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/amity-online-campus.jpg"
-        alt="Amity University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Amity University Online
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Amity University Online
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 3. DPU PUNE -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="dpu pune dy patil pune online"
+          href="/dpu-pune-online.html"
+        >
 
-  <!-- 3. DPU PUNE -->
+          <span class="brand-tile">
+            <img
+              src="images/dpu-pune-online-campus.jpg"
+              alt="DPU Pune campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="dpu pune dy patil pune online"
-    href="/dpu-pune-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/dpu-pune-online-campus.jpg"
-        alt="DPU Pune campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              DPU Pune
+            </h3>
 
-    <div>
+            <p>
+              Online degree and management programs
+            </p>
 
-      <h3>
-        DPU Pune
-      </h3>
+          </div>
 
-      <p>
-        Online degree and management programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 4. LOVELY PROFESSIONAL UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="lovely professional university lpu online"
+          href="/lpu-online.html"
+        >
 
-  <!-- 4. LOVELY PROFESSIONAL UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/lpu-online-campus.jpg"
+              alt="Lovely Professional University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="lovely professional university lpu online"
-    href="/lpu-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/lpu-online-campus.jpg"
-        alt="Lovely Professional University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Lovely Professional University
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Lovely Professional University
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 5. UTTARANCHAL UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="uttaranchal university uu online"
+          href="/uttaranchal-online.html"
+        >
 
-  <!-- 5. UTTARANCHAL UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/uttaranchal-online-campus.jpg"
+              alt="Uttaranchal University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="uttaranchal university uu online"
-    href="/uttaranchal-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/uttaranchal-online-campus.jpg"
-        alt="Uttaranchal University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Uttaranchal University
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Uttaranchal University
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 6. CHANDIGARH UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="chandigarh university online cu"
+          href="/chandigarh-university-online.html"
+        >
 
-  <!-- 6. CHANDIGARH UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/chandigarh-university-online-campus.jpg"
+              alt="Chandigarh University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="chandigarh university online cu"
-    href="/chandigarh-university-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/chandigarh-university-online-campus.jpg"
-        alt="Chandigarh University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Chandigarh University Online
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Chandigarh University Online
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 7. GLA UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="gla university online"
+          href="/gla-online.html"
+        >
 
-  <!-- 7. GLA UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/gla-online-campus.jpg"
+              alt="GLA University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="gla university online"
-    href="/gla-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/gla-online-campus.jpg"
-        alt="GLA University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              GLA University
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        GLA University
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 8. SHOOLINI UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="shoolini university online"
+          href="/shoolini-online.html"
+        >
 
-  <!-- 8. SHOOLINI UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/shoolini-online-campus.jpg"
+              alt="Shoolini University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="shoolini university online"
-    href="/shoolini-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/shoolini-online-campus.jpg"
-        alt="Shoolini University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Shoolini University
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Shoolini University
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 9. KURUKSHETRA UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="kurukshetra university kuk online"
+          href="/kurukshetra-online.html"
+        >
 
-  <!-- 9. KURUKSHETRA UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/kurukshetra-online-campus.jpg"
+              alt="Kurukshetra University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="kurukshetra university kuk online"
-    href="/kurukshetra-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/kurukshetra-online-campus.jpg"
-        alt="Kurukshetra University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Kurukshetra University
+            </h3>
 
-    <div>
+            <p>
+              Online degree programs
+            </p>
 
-      <h3>
-        Kurukshetra University
-      </h3>
+          </div>
 
-      <p>
-        Online degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 10. SIKKIM MANIPAL UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="sikkim manipal university smu online"
+          href="/smu-online.html"
+        >
 
-  <!-- 10. SIKKIM MANIPAL UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/smu-online-campus.jpg"
+              alt="Sikkim Manipal University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="sikkim manipal university smu online"
-    href="/smu-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/smu-online-campus.jpg"
-        alt="Sikkim Manipal University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Sikkim Manipal University
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Sikkim Manipal University
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 11. ANDHRA UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="andhra university au online"
+          href="/andhra-university-online.html"
+        >
 
-  <!-- 11. ANDHRA UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/andhra-university-online-campus.jpg"
+              alt="Andhra University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="andhra university au online"
-    href="/andhra-university-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/andhra-university-online-campus.jpg"
-        alt="Andhra University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Andhra University
+            </h3>
 
-    <div>
+            <p>
+              Online degree programs
+            </p>
 
-      <h3>
-        Andhra University
-      </h3>
+          </div>
 
-      <p>
-        Online degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 12. VIVEKANANDA GLOBAL UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="vivekananda global university vgu online"
+          href="/vgu-online.html"
+        >
 
-  <!-- 12. VIVEKANANDA GLOBAL UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/vgu-online-campus.jpg"
+              alt="Vivekananda Global University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="vivekananda global university vgu online"
-    href="/vgu-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/vgu-online-campus.jpg"
-        alt="Vivekananda Global University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Vivekananda Global University
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Vivekananda Global University
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 13. UPES -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="upes university online"
+          href="/upes-online.html"
+        >
 
-  <!-- 13. UPES -->
+          <span class="brand-tile">
+            <img
+              src="images/upes-online-campus.jpg"
+              alt="UPES campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="upes university online"
-    href="/upes-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/upes-online-campus.jpg"
-        alt="UPES campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              UPES Online
+            </h3>
 
-    <div>
+            <p>
+              Online management and specialised degree programs
+            </p>
 
-      <h3>
-        UPES Online
-      </h3>
+          </div>
 
-      <p>
-        Online management and specialised degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 14. GALGOTIAS UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="galgotias university online gu"
+          href="/galgotias-online.html"
+        >
 
-  <!-- 14. GALGOTIAS UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/galgotias-online-campus.jpg"
+              alt="Galgotias University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="galgotias university online gu"
-    href="/galgotias-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/galgotias-online-campus.jpg"
-        alt="Galgotias University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Galgotias University
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Galgotias University
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 15. DPU MUMBAI -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="dpu mumbai dy patil mumbai online"
+          href="/dpu-mumbai-online.html"
+        >
 
-  <!-- 15. DPU MUMBAI -->
+          <span class="brand-tile">
+            <img
+              src="images/dpu-mumbai-online-campus.jpg"
+              alt="DPU Mumbai campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="dpu mumbai dy patil mumbai online"
-    href="/dpu-mumbai-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/dpu-mumbai-online-campus.jpg"
-        alt="DPU Mumbai campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              DPU Mumbai
+            </h3>
 
-    <div>
+            <p>
+              Online degree and management programs
+            </p>
 
-      <h3>
-        DPU Mumbai
-      </h3>
+          </div>
 
-      <p>
-        Online degree and management programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 16. PARUL UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="parul university pu online"
+          href="/parul-online.html"
+        >
 
-  <!-- 16. PARUL UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/parul-online-campus.jpg"
+              alt="Parul University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="parul university pu online"
-    href="/parul-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/parul-online-campus.jpg"
-        alt="Parul University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Parul University
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Parul University
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 17. AMRITA UNIVERSITY -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="amrita university amrita online"
+          href="/amrita-online.html"
+        >
 
-  <!-- 17. AMRITA UNIVERSITY -->
+          <span class="brand-tile">
+            <img
+              src="images/amrita-online-campus.jpg"
+              alt="Amrita University campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="amrita university amrita online"
-    href="/amrita-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/amrita-online-campus.jpg"
-        alt="Amrita University campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              Amrita University Online
+            </h3>
 
-    <div>
+            <p>
+              Online undergraduate and postgraduate degree programs
+            </p>
 
-      <h3>
-        Amrita University Online
-      </h3>
+          </div>
 
-      <p>
-        Online undergraduate and postgraduate degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
 
+        <!-- 18. NMIMS -->
 
+        <a
+          class="institution-card directory-item"
+          data-category="online"
+          data-search="nmims online narsee monjee management"
+          href="/nmims-online.html"
+        >
 
-  <!-- 18. NMIMS -->
+          <span class="brand-tile">
+            <img
+              src="images/nmims-online-campus.jpg"
+              alt="NMIMS campus"
+              loading="lazy"
+            >
+          </span>
 
-  <a
-    class="institution-card directory-item"
-    data-category="online"
-    data-search="nmims online narsee monjee management"
-    href="/nmims-online.html"
-  >
+          <div>
 
-    <span class="university-thumb">
-      <img
-        src="images/nmims-online-campus.jpg"
-        alt="NMIMS campus"
-        loading="lazy"
-      >
-    </span>
+            <h3>
+              NMIMS Online
+            </h3>
 
-    <div>
+            <p>
+              Online management and degree programs
+            </p>
 
-      <h3>
-        NMIMS Online
-      </h3>
+          </div>
 
-      <p>
-        Online management and degree programs
-      </p>
+        </a>
 
-    </div>
 
-  </a>
+      </div>
 
-
-</div>
     </section>
 
 
